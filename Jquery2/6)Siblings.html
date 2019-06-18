@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                font-size: 22px;
+            }
+            div {
+                margin-top: .1em;
+            }
+            .parent{
+                margin-left: .8em;
+            }
+            .child{
+                margin-left: 1.6em;
+            }
+    </style>
+</head>
+<body>
+    
+    <div style="color: black">First</div>
+    <div style="color: black">Second</div>
+    <div style="color: black">Third</div>
+    <div id="target" style="color: black">Fourth (Target)</div>
+    <div style="color: black">Fifth</div>
+    <div style="color: black">Sixth</div>
+    <div style="color: black">Seven</div>
+
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        
+       $(function (){
+
+           //Actualiza al elemento anterior
+           //$('#target').prev().attr('style', 'color:violet')
+
+           //Actualiza todos los elementos previos
+           //$('#target').prevAll().attr('style', 'color:violet')
+
+           //Actualiza los elementos anteriores de stop (pero no lo incluye)
+           //$('#target').prevUntil('.stop').attr('style', 'color:violet')
+
+           //Actualiza al elemento siguiente
+           //$('#target').next().attr('style', 'color:violet')
+
+           //Actualiza todos los elementos previos
+           //$('#target').nextAll().attr('style', 'color:violet')
+
+           //Actualiza los elementos anteriores de stop (pero no lo incluye)
+           $('#target').nextUntil('.stop').attr('style', 'color:violet')
+
+       })
+    </script>
+</body>
+</html>

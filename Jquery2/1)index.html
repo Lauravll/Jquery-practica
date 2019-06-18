@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello 1</h1>
+    <h1 class="demo">Hello 2</h1>
+    <h1 id="h1-id">Hello 3</h1>
+    <!-- $(contenido) -> Encontrar grupo de items, regitrar un evento reay handler-->
+    <!--$.method() -> Accede a utilidades globales, no realiza acciones en un objeto-->
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        //registramos un evento ready pero con jquery
+       $(function (){
+           //Se ejecutará cuando la página este lista
+           alert('Hello, world!')
+
+           //Selectores parecidos a css:
+           //*Para Element Type como <h1> 
+            //$('h1')
+           //*Para clases <h1 class="centered">Hello, world </h1>
+            //$('.centered')
+           //*Para id   <h1 id="banner">Hello, world </h1>
+            //$('#banner')
+           //Si quiero múltiples items:
+
+           //Va a actualizar el texto del h1
+           //$('h1').text('Hello, jQuery');
+           //Si quiero cambiar la clase
+           //$('.demo').text('Hello, jQuery');
+           //Clases demo que están dentro de h1
+           //$('h1.demo').text('Hello, jQuery');
+           //Para id
+           $('#h1-id').text('Hello, jQuery');
+
+       })
+    </script>
+</body>
+</html>

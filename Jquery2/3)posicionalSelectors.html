@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello,world </h1>
+
+    <!--Parent/child-->
+    <nav>
+        <a href="#">Link</a>
+    </nav>
+
+    <!--Descendent-->
+    <nav>
+        <ul>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </nav>
+
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        
+       $(function (){
+
+        //*Parent/child*
+        //Los anchor tags <a> se encuentran dentro de un elemento nav
+        //Para encontrar directamente  un pariente/hijo uso un angle bracket >
+        $('nav > a')
+
+        //*Descendent*
+        $('nav a')
+
+       })
+    </script>
+</body>
+</html>

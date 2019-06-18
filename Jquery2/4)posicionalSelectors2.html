@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Inside Header</h1>
+    </header>
+
+    <header>
+        <div>
+            <h1>Inside Header</h1>
+        </div>
+    </header>
+
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        
+       $(function (){
+        //Parent/Child
+        $('header > h1').text('Parent child')
+        
+        //Descendant
+        $('header h1').text('Descendant')
+
+       })
+    </script>
+</body>
+</html>

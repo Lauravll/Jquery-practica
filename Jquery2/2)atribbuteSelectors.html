@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello,world </h1>
+    <h1 custom="banner">Custom Atribute!</h1>
+   <h1 class="col-md-4">Class Starts With Col</h1>
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        
+       $(function (){
+           //Si quiero que empieze con col uso ^, * para contiene
+           //$('h1[class^="col"]').text('Hello, jQuery');
+           $('h1[class*="md"]').text('Hello, jQuery');
+
+           //Encuentra elementos basados en la igualdad del atributo
+           $('[custom="banner"]').text('Encontrado por igualdad');
+
+           //Encuentra elementos basados en el atributo con el que empieza
+           $('[class^="col"]').text('Encontrado por lo que empieza');
+
+           //Encuentra elementos basados en el atributo con el que contiene
+           $('[class*="col"]').text('Encontrado por lo que contiene');
+
+           
+
+
+       })
+    </script>
+</body>
+</html>

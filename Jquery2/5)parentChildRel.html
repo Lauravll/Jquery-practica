@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta charset="utf-8" />
+    <style>
+        body{
+            font-size: 22px;
+        }
+        div {
+            margin-top: .1em;
+        }
+        .parent{
+            margin-left: .8em;
+        }
+        .child{
+            margin-left: 1.6em;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--
+    <div id="target" style="color:black">
+        Grandparent
+        <div style="color:black" class="parent demo">
+            -Parent
+            <div style="color: black" class="child demo">-First child</div>
+            <div style="color: black" class="child">-Second child</div>
+        </div>
+    </div>-->
+
+    <div id="target" style="color:black">
+            Grandparent
+            <div style="color:black" class="parent">
+                -Parent
+                <div style="color: black" class="child">-First child</div>
+                <div style="color: black" class="child" id="demo">-Second child</div>
+            </div>
+        </div>
+
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+    
+       $(function (){
+        //Parent/Child
+
+        //va a encontrar a todos los hijos directos de Grandparent
+        //El primer locator(metodo) nos dara un elemento con el id target
+        //El segundo nos dara todos los hijos directos
+        //El metodo attr nos dara una actualizacion del atributo
+        //$('#target').children().attr('style', 'color:violet');
+
+        //va a encontrar a todos los hijos directos de parent
+        //$('.parent').children().attr('style', 'color:violet');
+
+        //Encuentra todo lo que necesita un selector
+        //$('#target').find('.demo').attr('style', 'color:violet');
+
+        //Encuentra siempre lo que quiere el selector
+        //El primer locator nos dara el elemento con el id target
+        //El segundo metodo nos dara todos los desciendientes
+        //El metodo attr actualizara el atributo
+        //$('#target').find('*').attr('style', 'color:blue');
+
+        //El primer metodo nos dara un elemento con el id demo
+        //El segundo metodo nos dara el padre (solo el padre directo)
+        //El attr metodo actualizara el atributo
+        //$('#demo').parent().attr('style', 'color:violet')
+
+        //El primer metodo nos dara un elemento con el id demo
+        //El segundo metodo nos daran todos los padres y abuelos directos
+        //El attr metodo actualizara el atributo
+        $('#demo').parents().attr('style', 'color:violet')
+
+
+       })
+    </script>
+</body>
+</html>

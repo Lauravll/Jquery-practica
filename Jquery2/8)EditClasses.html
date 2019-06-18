@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                font-size: 22px;
+            }
+            div {
+                margin-top: .1em;
+            }
+            .red{
+                color:red;
+            }
+            .blue {
+                color: blue;
+            }
+            .parent{
+                margin-left: .8em;
+            }
+            .child{
+                margin-left: 1.6em;
+            }
+    </style>
+</head>
+<body>
+    
+    <div id="target">Demo Element</div>
+
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+       $(function (){
+        //$('#target').addClass('blue');
+        $('#target').removeClass('blue');
+       })
+    </script>
+</body>
+</html>

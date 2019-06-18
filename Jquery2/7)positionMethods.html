@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                font-size: 22px;
+            }
+            div {
+                margin-top: .1em;
+            }
+            .parent{
+                margin-left: .8em;
+            }
+            .child{
+                margin-left: 1.6em;
+            }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div>First</div>
+        <div>Second</div>
+        <div>Third</div>
+        <div id="target">Fourth (Target)</div>
+        <div>Fifth</div>
+        <div>Sixth</div>
+        <div>Seventh</div>
+    </div>
+
+    <div id="display"></div>
+
+    <script src="./Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        
+       $(function (){
+
+        //obtengo el elemento
+        var element = $('#target');
+        var container = $('#container');
+
+        //children es la coleccion
+        var index = container.children().index(element);
+
+        //lo pongo dentro del display
+         $('#display').text('El index es ' + index)
+
+         //Ahora al reves, tengo el contenedor, obtengo los children
+         //container.children().get(index).attr('style', 'color:violet')
+         //Retorna un elemento DOM, no un JQuery object
+         var foundElement = container.children().get(index);
+        //Convierto a Jquery object
+        var JQueryObject = $(foundElement);
+        JQueryObject.attr('style', 'color:violet')
+       })
+    </script>
+</body>
+</html>
